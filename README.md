@@ -22,12 +22,12 @@ Agregar sección de salas colaborativas, permite conectarse hasta 8 personas (un
 
 - Seleccionar tarjetas
 
-[Seleccionar tarjetas](https://lh5.googleusercontent.com/ulz0VGA62CLk39XhvaOwpQBd_G6eg2u687hGPt2HoDDN4w95eB3Hf9okfFADJK6LO3a0Ys65pDqoPw=w1366-h657 "Seleccionar tarjetas")
+![Seleccionar tarjetas](./resources/1Seleccion-de-tarjetas.png)
 
 - Tarjeta seleccionada
 
-[Tarjeta seleccionada](https://drive.google.com/file/d/1TdtvoelG8PRtIjw5eqLsDd6lvCHjmdxW/preview "Tarjeta seleccionada")
+![Tarjeta seleccionada](./resources/2Tarjeta-seleccionada.png)
 
 - Mostrar tarjeta
 
-[Mostrar tarjeta](https://drive.google.com/file/d/1ZrJ7zusUwx783JfDbqy7SM_nsHNq9pnF/preview "Mostrar tarjeta")
+![Mostrar tarjeta](./resources/3Tarjeta-mostrada.png)
