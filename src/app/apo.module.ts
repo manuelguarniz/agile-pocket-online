@@ -9,7 +9,7 @@ import { RoutesModule } from './routes/routes.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './static/footer/footer.component';
 import { HeaderComponent } from './static/header/header.component';
-import { SettingService } from './components/core/setting.service';
+import { CoreModule } from './components/core/core.module';
 
 @NgModule({
   declarations: [
@@ -24,9 +24,9 @@ import { SettingService } from './components/core/setting.service';
     BrowserModule,
     RoutesModule,
     NgbModule,
+    CoreModule,
   ],
   providers: [
-    SettingService,
   ],
   bootstrap: [ApoComponent]
 })
