@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "agile-pocket-online"
+    }
+  },
+  "defaultProject": "agile-pocket-online",
+  "cli": {
+    "analytics": false
+  }
 }

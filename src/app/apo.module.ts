@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { ApoComponent } from './apo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ApoComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ApoComponent]
 })
-export class AppModule { }
+export class ApoModule { }
