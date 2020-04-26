@@ -1,27 +1,33 @@
-# AgilePocketOnline
+# Agile Pocket Online
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+Una web online gratuita que permite puntuar actividades durante una sesión de planning usando metodologías ágiles. En la versión final, busca crear sesiones online para puntuar actividades con la colaboración de todos los integrantes del equipo. Estas interacciones serán en tiempo real.
 
-## Development server
+## MVP1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Crear una web interactiva que permita puntuar con tarjetas coloridas.
+Están tienen que estar ordenadas según la secuencia de fibonacci desde el número 0 hasta el número 144, adicionar un símbolo con signo de interrogación, uno de infinito y una taza de cafe.
+Al seleccionar una tarjeta, esta tiene que estar oculta hasta que se vuelva a seleccionar la parte posterior de la tarjeta para mostrarse.
 
-## Code scaffolding
+## MVP2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Agregar diferentes ordenados a la selección de tarjetas conservando la secuencia final del ordenado en fibonacci:
+Standard: Secuencia de 12 numeros: 0, ½, 1, 2, 3, 5, 8, 13, 20, 40, 90, 100.
+T.Shirt: Secuencia de 6 símbolos: XS, S, M, L, XL, 2XL.
 
-## Build
+## MVP3
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Agregar sección de salas colaborativas, permite conectarse hasta 8 personas (una de ellas es el moderador). Se busca que este moderador, cree sesión para puntuar una cierta actividad, y concluir con un resultado a la actividad planteada.
 
-## Running unit tests
+## Mockups
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Seleccionar tarjetas
 
-## Running end-to-end tests
+[Seleccionar tarjetas](https://drive.google.com/file/d/1EM4fcnZ1p-Pcgv0VI9R5w9Ag9yvWwXTb/preview "Seleccionar tarjetas")
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Tarjeta seleccionada
 
-## Further help
+[Tarjeta seleccionada](https://drive.google.com/file/d/1TdtvoelG8PRtIjw5eqLsDd6lvCHjmdxW/preview "Tarjeta seleccionada")
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Mostrar tarjeta
+
+[Mostrar tarjeta](https://drive.google.com/file/d/1ZrJ7zusUwx783JfDbqy7SM_nsHNq9pnF/preview "Mostrar tarjeta")
