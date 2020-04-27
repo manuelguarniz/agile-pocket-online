@@ -1,1 +1,7 @@
-<p>list-card works!</p>
+<div class="row">
+  <div class="col-4 px-0" *ngFor="let item of listCards">
+    <div class="agile-card m-1 py-5">
+      {{ item }}
+    </div>
+  </div>
+</div>

@@ -2,13 +2,17 @@
   "name": "Fibonacci",
   "description": "Poket Fibonacci",
   "content": [
+    "0",
     "1",
     "2",
     "3",
     "5",
     "8",
+    "13",
     "21",
     "34",
-    "55"
+    "55",
+    "89",
+    "144"
   ]
 }

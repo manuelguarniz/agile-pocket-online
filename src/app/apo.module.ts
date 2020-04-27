@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './static/footer/footer.component';
 import { HeaderComponent } from './static/header/header.component';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CoreModule } from './core/core.module';
     RoutesModule,
     NgbModule,
     CoreModule,
+    HttpClientModule,
   ],
   providers: [
   ],
