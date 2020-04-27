@@ -1,0 +1,15 @@
+.agile-card-selected {
+  background: #2a4e5c;
+  border-color: #ffffff;
+  border-style: dashed;
+  border-width: 0.3rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  text-align: center;
+  font-size: xx-large;
+  cursor: pointer;
+  line-height: 22rem
+}
+.agile-card-selected i.fas {
+  vertical-align: middle;
+}
