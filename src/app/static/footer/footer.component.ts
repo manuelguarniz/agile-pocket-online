@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SettingService } from 'src/app/components/core/settings/setting.service';
+import { SettingService } from '@app/core/settings/setting.service';
 
 @Component({
   selector: 'apo-footer',

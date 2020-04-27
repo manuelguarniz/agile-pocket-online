@@ -9,7 +9,7 @@ import { RoutesModule } from './routes/routes.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './static/footer/footer.component';
 import { HeaderComponent } from './static/header/header.component';
-import { CoreModule } from './components/core/core.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
