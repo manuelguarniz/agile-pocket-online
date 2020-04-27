@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from '@app/services/card.service';
 import { GlobalCardService } from '@app/services/global-card.service';
+import { Card } from '@app/models/templates/card';
 
 @Component({
   selector: 'apo-list-card',
@@ -13,7 +14,7 @@ import { GlobalCardService } from '@app/services/global-card.service';
 })
 export class ListCardComponent implements OnInit {
 
-  listCards: string[] = [];
+  listCards: Card[] = [];
 
   constructor(
     private cardService: CardService,
@@ -28,7 +29,14 @@ export class ListCardComponent implements OnInit {
     const callCards = new Promise((resolve, reject) => {
       this.cardService.getFibonacciSecuence().subscribe(
         response => {
-          this.listCards.push(...response.content);
+          this.listCards.push(...response.content.map(
+            item => {
+              return {
+                isGlobal: false,
+                item,
+              } as Card;
+            }
+          ));
           resolve();
         }
       );
@@ -36,7 +44,14 @@ export class ListCardComponent implements OnInit {
     callCards.then(_ => {
       this.globalCardService.getGlobalSecuence().subscribe(
         response => {
-          this.listCards.push(...response.content);
+          this.listCards.push(...response.content.map(
+            item => {
+              return {
+                isGlobal: true,
+                item,
+              } as Card;
+            }
+          ));
         }
       );
     })

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Secuence } from '@app/models/cards/secuence-fibonacci';
+import { Secuence } from '@app/models/cards/secuence';
 import { Observable, Subscriber } from 'rxjs';
 
 @Injectable()
