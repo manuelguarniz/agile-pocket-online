@@ -2,8 +2,8 @@
   "name": "Global",
   "description": "Icons Global Cards Poket",
   "content": [
-    "icon-question",
-    "icon-ifinity",
-    "icon-coffe"
+    "fa-question",
+    "fa-infinity",
+    "fa-coffee"
   ]
 }
