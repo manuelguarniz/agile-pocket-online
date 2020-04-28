@@ -28,28 +28,3 @@
   font-weight: bold;
   color: #ffffff;
 }
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 575.98px) {
-
-}
-
-/* Medium devices (tablets, 768px and up)
-@media (max-width: 767.98px) {
-}
- */
-
-@media (max-width: 991.98px) {
-  .agile-card-selected{
-    /* line-height: 22rem; */
-  }
-
-}
-
-/*
-// Large devices (desktops, 992px and up) 
-// Extra large devices (large desktops, 1200px and up) 
-@media (min-width: 1200px) {
-
-}
-*/

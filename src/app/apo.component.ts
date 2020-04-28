@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Utils } from './utils/utils';
 
 @Component({
   selector: 'apo-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ApoComponent {
   title = 'agile-pocket-online';
+  backTop() {
+    Utils.scrollToTop(100);
+  }
 }

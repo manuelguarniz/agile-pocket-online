@@ -8,4 +8,11 @@
   font-size: xx-large;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 1rem;
+
+  transition: transform .2s; /* Animation */
+}
+
+.agile-card:hover {
+  transform: scale(1.05);
 }
