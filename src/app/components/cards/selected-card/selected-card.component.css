@@ -28,3 +28,9 @@
   font-weight: bold;
   color: #ffffff;
 }
+
+@media only screen and (max-width: 600px) {
+  .scrum-value {
+    font-size: 10rem;
+  }
+}
