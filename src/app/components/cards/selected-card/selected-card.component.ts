@@ -29,4 +29,23 @@ export class SelectedCardComponent implements OnInit {
     );
   }
 
+  showClassCard(card: Card): any {
+    const classCard = {
+      'agile-card-selected': true,
+      'm-1': true,
+      'content-default-spaicing': true,
+      'content-spaicing': false,
+    };
+    if (card && !card.isGlobal) {
+      classCard['content-spaicing'] = true;
+      classCard['content-default-spaicing'] = false;
+    }
+    return classCard;
+  }
+
+  clicketCard() {
+    if (this.cardSelected) {
+      this.cardSelected = null;
+    }
+  }
 }
