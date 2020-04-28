@@ -11,6 +11,7 @@ import { FooterComponent } from './static/footer/footer.component';
 import { HeaderComponent } from './static/header/header.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SelectedCardService } from './services/selected-card.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [
+    SelectedCardService,
   ],
   bootstrap: [ApoComponent]
 })

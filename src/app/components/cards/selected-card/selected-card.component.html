@@ -1,7 +1,21 @@
 <div class="row justify-content-center">
   <div class="col-10 px-0">
-    <div class="agile-card-selected m-1 py-5">
-      <i class="fas fa-burn fa-7x"></i>
-    </div>
+    <ng-container *ngIf="cardSelected != undefined && cardSelected != null; else defaultSelected">
+      <ng-container *ngIf="cardSelected.isGlobal; else iconSelected">
+        <div class="agile-card-selected content-default-spaicing m-1">
+          <i class="fas {{cardSelected.item}} fa-7x"></i>
+        </div>
+      </ng-container>
+      <ng-template #iconSelected>
+        <div class="agile-card-selected content-spaicing m-1">
+          <span class="scrum-value">{{ cardSelected.item }}</span>
+        </div>
+      </ng-template>
+    </ng-container>
+    <ng-template #defaultSelected>
+      <div class="agile-card-selected content-default-spaicing m-1">
+        <i class="fas fa-burn fa-7x"></i>
+      </div>
+    </ng-template>
   </div>
 </div>

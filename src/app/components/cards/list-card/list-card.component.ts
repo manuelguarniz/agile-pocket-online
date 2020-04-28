@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CardService } from '@app/services/card.service';
 import { GlobalCardService } from '@app/services/global-card.service';
 import { Card } from '@app/models/templates/card';
+import { SelectedCardService } from '@app/services/selected-card.service';
 
 @Component({
   selector: 'apo-list-card',
@@ -19,6 +20,7 @@ export class ListCardComponent implements OnInit {
   constructor(
     private cardService: CardService,
     private globalCardService: GlobalCardService,
+    private selectedCardService: SelectedCardService,
   ) { }
 
   ngOnInit(): void {
@@ -57,4 +59,7 @@ export class ListCardComponent implements OnInit {
     });
   }
 
+  selectedCard(card: Card) {
+    this.selectedCardService.selectedCard(card);
+  }
 }
