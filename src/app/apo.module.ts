@@ -12,6 +12,8 @@ import { HeaderComponent } from './static/header/header.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectedCardService } from './services/selected-card.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { SelectedCardService } from './services/selected-card.service';
     NgbModule,
     CoreModule,
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     SelectedCardService,
