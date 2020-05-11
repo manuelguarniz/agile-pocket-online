@@ -1,10 +1,10 @@
 {
   "configVersion": 1,
-  "timestamp": 1589157203731,
+  "timestamp": 1589158299215,
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "app",
+      "name": "apo",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
