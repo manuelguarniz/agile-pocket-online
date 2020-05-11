@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CardService } from '@app/services/card.service';
 import { GlobalCardService } from '@app/services/global-card.service';
 import { Card } from '@app/models/templates/card';
 import { SelectedCardService } from '@app/services/selected-card.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'apo-list-card',
@@ -14,13 +15,14 @@ import { SelectedCardService } from '@app/services/selected-card.service';
   ]
 })
 export class ListCardComponent implements OnInit {
+  @Output() cardSelected: Subject<Card> = new Subject();
 
   listCards: Card[] = [];
 
   constructor(
     private cardService: CardService,
     private globalCardService: GlobalCardService,
-    private selectedCardService: SelectedCardService,
+    // private selectedCardService: SelectedCardService,
   ) { }
 
   ngOnInit(): void {
@@ -60,6 +62,7 @@ export class ListCardComponent implements OnInit {
   }
 
   selectedCard(card: Card) {
-    this.selectedCardService.selectedCard(card);
+    this.cardSelected.next(card);
+    // this.selectedCardService.selectedCard(card);
   }
 }

@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input, Output } from '@angular/core';
 import { SelectedCardService } from '@app/services/selected-card.service';
 import { Card } from '@app/models/templates/card';
 import { Utils } from '@app/utils/utils';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'apo-selected-card',
@@ -11,12 +12,13 @@ import { Utils } from '@app/utils/utils';
   ]
 })
 export class SelectedCardComponent implements OnInit {
-  @ViewChild('cardElement') cardElement: ElementRef<any>;
+  @Input() cardSelectedObserver: Observable<Card>;
+  @Output() closeCardSelected: Subject<boolean> = new Subject();
 
   cardSelected: Card;
+  cardShowed: Card;
 
   constructor(
-    private selectedCardService: SelectedCardService,
   ) { }
 
   ngOnInit(): void {
@@ -24,9 +26,8 @@ export class SelectedCardComponent implements OnInit {
   }
 
   onListenerSelectedCard() {
-    this.selectedCardService.listenerSelectedCard().subscribe(
+    this.cardSelectedObserver.subscribe(
       response => {
-        // Utils.scrollElementToTop(this.cardElement, 100);
         this.cardSelected = response;
       }
     );
@@ -50,7 +51,11 @@ export class SelectedCardComponent implements OnInit {
 
   clicketCard() {
     if (this.cardSelected) {
-      this.cardSelected = null;
+      if (!this.cardShowed) {
+        this.cardShowed = this.cardSelected;
+      } else {
+        this.closeCardSelected.next(true);
+      }
     }
   }
 }

@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-agile {
+  /* background: rgb(42, 78, 92);
+  background: radial-gradient(circle, rgba(42, 78, 92, 0.9640231092436975) 50%, rgba(27, 61, 60, 1) 100%); */
+  background: rgb(42, 78, 92);
+  background: radial-gradient(circle, rgba(39, 115, 144, 0.9640231092436975) 50%, rgb(15, 76, 74) 100%);
+}
+
 .set-default-relative {
   position: relative;
 }

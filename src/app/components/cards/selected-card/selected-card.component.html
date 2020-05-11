@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
-  <div class="col-md-10 col-sm-12 px-0" #cardElement>
-    <div [ngClass]="showClassCard(cardSelected)" (click)="clicketCard()">
-      <ng-container *ngIf="cardSelected != undefined && cardSelected != null; else defaultSelected">
+  <div class="col-md-5 col-sm-12 px-0">
+    <div [ngClass]="showClassCard(cardShowed)" (click)="clicketCard()">
+      <ng-container *ngIf="cardShowed != undefined && cardShowed != null; else defaultSelected">
         <ng-container *ngIf="cardSelected.isGlobal; else iconSelected">
           <i class="fas {{cardSelected.item}} fa-7x"></i>
         </ng-container>
