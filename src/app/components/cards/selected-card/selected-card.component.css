@@ -10,10 +10,10 @@
   cursor: pointer;
 }
 
-.content-spaicing {
+/* .content-spaicing {
   padding-top: 10rem;
   padding-bottom: 10rem;
-}
+} */
 
 .content-spaicing {
   padding-top: 7rem;
@@ -43,4 +43,24 @@
     padding-top: 10rem;
     padding-bottom: 10rem;
   }
+}
+
+.card-box {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: transform 1s;
+}
+.card-box__side {
+  position: absolute;
+  backface-visibility: hidden;
+  user-select: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.card-box__front {
+  transform: rotateY(0deg);
+}
+.card-box__back {
+  transform: rotateY(180deg);
 }

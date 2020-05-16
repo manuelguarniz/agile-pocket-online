@@ -1,17 +1,25 @@
 <div class="row justify-content-center">
-  <div class="col-md-5 col-sm-12 px-0">
-    <div [ngClass]="showClassCard(cardShowed)" (click)="clicketCard()">
-      <ng-container *ngIf="cardShowed != undefined && cardShowed != null; else defaultSelected">
-        <ng-container *ngIf="cardSelected.isGlobal; else iconSelected">
-          <i class="fas {{cardSelected.item}} fa-7x"></i>
-        </ng-container>
-        <ng-template #iconSelected>
-          <span class="scrum-value">{{ cardSelected.item }}</span>
-        </ng-template>
-      </ng-container>
-      <ng-template #defaultSelected>
-        <i class="fas fa-burn fa-7x"></i>
-      </ng-template>
+  <div class="col-md-5 col-sm-12 px-0 card-box" [@flipState]="flip">
+
+    <div class="agile-card-selected m-1 content-default-spaicing card-box__side card-box__front"
+      (click)="clickedCard()">
+      <i class="fas fa-burn fa-7x"></i>
     </div>
+
+    <div [ngClass]="showClassCard(cardShowed)"
+      class="agile-card-selected m-1 content-spaicing card-box__side card-box__back"
+      (click)="clickedCard()">
+      <ng-container *ngTemplateOutlet="templateCardSelected"></ng-container>
+    </div>
+
   </div>
 </div>
+
+<ng-template #templateCardSelected>
+  <ng-container *ngIf="cardSelected.isGlobal; else iconSelected">
+    <i class="fas {{cardSelected.item}} fa-7x"></i>
+  </ng-container>
+  <ng-template #iconSelected>
+    <span class="scrum-value">{{ cardSelected.item }}</span>
+  </ng-template>
+</ng-template>

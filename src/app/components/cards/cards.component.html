@@ -2,13 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <ng-container *ngIf="!activeCardSelected; else elseTemplate">
-          <apo-list-card (cardSelected)="listenerCardSelected($event)"></apo-list-card>
-        </ng-container>
-        <ng-template #elseTemplate>
-          <apo-selected-card [cardSelectedObserver]="emiterCardSelected"
-            (closeCardSelected)="listenerClosedCardSelected($event)"></apo-selected-card>
-        </ng-template>
+
+        <apo-list-card [@showerHiddenCard]="!activeCardSelected ? '_show' : '_hidden'"
+          (cardSelected)="listenerCardSelected($event)"></apo-list-card>
+
+        <apo-selected-card [@showerHiddenCard]="!activeCardSelected ? '_hidden' : '_show'"
+          [cardSelectedObserver]="emiterCardSelected"
+          (closeCardSelected)="listenerClosedCardSelected($event)"></apo-selected-card>
+
       </div>
     </div>
   </div>

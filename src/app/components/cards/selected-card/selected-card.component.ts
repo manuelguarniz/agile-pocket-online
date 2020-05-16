@@ -1,14 +1,23 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, Output } from '@angular/core';
-import { SelectedCardService } from '@app/services/selected-card.service';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Card } from '@app/models/templates/card';
-import { Utils } from '@app/utils/utils';
 import { Observable, Subject } from 'rxjs';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'apo-selected-card',
   templateUrl: './selected-card.component.html',
   styleUrls: ['./selected-card.component.css'],
-  providers: [
+  animations: [
+    trigger('flipState', [
+      state('active', style({
+        transform: 'rotateY(180deg)'
+      })),
+      state('inactive', style({
+        transform: 'rotateY(0)'
+      })),
+      transition('active => inactive', animate('400ms ease-out')),
+      transition('inactive => active', animate('400ms ease-in'))
+    ])
   ]
 })
 export class SelectedCardComponent implements OnInit {
@@ -17,6 +26,7 @@ export class SelectedCardComponent implements OnInit {
 
   cardSelected: Card;
   cardShowed: Card;
+  flip = 'inactive';
 
   constructor(
   ) { }
@@ -35,27 +45,30 @@ export class SelectedCardComponent implements OnInit {
 
   showClassCard(card: Card): any {
     const classCard = {
-      'agile-card-selected': true,
-      'm-1': true,
       'content-default-spaicing': true,
       'content-spaicing': false,
-      'animation-card': false,
     };
     if (card && !card.isGlobal) {
       classCard['content-spaicing'] = true;
       classCard['content-default-spaicing'] = false;
-      classCard['animation-card'] = true;
     }
     return classCard;
   }
 
-  clicketCard() {
+  clickedCard() {
+    this.flip = (this.flip === 'inactive') ? 'active' : 'inactive';
     if (this.cardSelected) {
       if (!this.cardShowed) {
         this.cardShowed = this.cardSelected;
       } else {
-        this.closeCardSelected.next(true);
+        this.closeCardAndDestroy();
       }
     }
+  }
+
+  private closeCardAndDestroy() {
+    this.cardSelected = null;
+    this.cardShowed = null;
+    this.closeCardSelected.next(true);
   }
 }

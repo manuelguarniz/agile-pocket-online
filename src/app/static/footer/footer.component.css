@@ -19,3 +19,9 @@
 .text-agile-scrum > a:hover {
   color: #ffc107;
 }
+
+.float-footer {
+  position: fixed;
+  top: 0;
+  right: 0;
+}

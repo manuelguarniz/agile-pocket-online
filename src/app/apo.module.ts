@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ApoComponent } from './apo.component';
 import { CardsComponent } from './components/cards/cards.component';
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SelectedCardService } from './services/selected-card.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { TopPageComponent } from './components/top-page/top-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { environment } from '../environments/environment';
     ListCardComponent,
     FooterComponent,
     HeaderComponent,
+    TopPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { environment } from '../environments/environment';
     CoreModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    BrowserAnimationsModule,
   ],
   providers: [
     SelectedCardService,

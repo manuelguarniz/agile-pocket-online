@@ -2,15 +2,9 @@
 <div class="container-fluid set-default-relative">
   <main role="main" class="flex-shrink-0">
     <router-outlet></router-outlet>
-    <div class="container set-default-relative">
-      <div class="float-button-footer">
-        <apo-footer></apo-footer>
-      </div>
-    </div>
   </main>
 
-  <div class="circle-top" (click)="backTop()">
-    <i class="fas fa-arrow-up fa-2x align-center-arrow"></i>
-  </div>
+  <apo-footer></apo-footer>
+  <apo-top-page></apo-top-page>
 
 </div>
